@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 222.2 84% 4.9%;
+
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
+
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+
+		--primary: 222.2 47.4% 11.2%;
+		--primary-foreground: 210 40% 98%;
+		--primary-light: 222.2 47.4% 11.2%;
+
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+		--secondary-light: 210 40% 96.1%;
+
+		--tertiary: 210 40% 96.1%;
+		--tertiary-foreground: 222.2 47.4% 11.2%;
+		--tertiary-light: 210 40% 96.1%;
+
+		--accent: 210 40% 96.1%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+
+		--ring: 215 20.2% 65.1%;
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+
+		--primary: 210 40% 98%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+		--primary-light: 210 40% 98%;
+
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+		--secondary-light: 217.2 32.6% 17.5%;
+
+		--tertiary: 217.2 32.6% 17.5%;
+		--tertiary-foreground: 210 40% 98%;
+		--tertiary-light: 217.2 32.6% 17.5%;
+
+		--accent: 217.2 32.6% 17.5%;
+		--accent-foreground: 210 40% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 85.7% 97.3%;
+
+		--ring: 217.2 32.6% 17.5%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Poppins", sans-serif;
+		scroll-behavior: smooth;
+		color-scheme: dark;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+	}
+
+	.hash-span {
+		margin-top: -100px;
+		padding-bottom: 100px;
+		display: block;
+	}
+
+	.black-gradient {
+		background: #000000; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to right,
+			#434343,
+			#000000
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+	.violet-gradient {
+		background: #804dee;
+		background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+		background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+	}
+
+	.golden-gradient {
+		background: #edde5d; /* fallback for old browsers */
+		background: linear-gradient(
+			-90deg,
+			#edde5d 0%,
+			rgba(240, 152, 25, 0) 100%
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background: -webkit-linear-gradient(
+			-90deg,
+			#edde5d 0%,
+			rgba(240, 152, 25, 0) 100%
+		); /* Chrome 10-25, Safari 5.1-6 */
+	}
+
+	.green-pink-gradient {
+		background: #45e8b8; /* fallback for old browsers */
+		background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+		background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+	}
+
+	.pink-gradient {
+		background: #ff5858; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #ff5858, #f09819); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to top,
+			#ff5858,
+			#f09819
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+	.blue-gradient {
+		background: #00b4db; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #00b4db, #0083b0); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to top,
+			#00b4db,
+			#0083b0
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+	.purple-gradient {
+		background: #614385; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #614385, #516395); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to top,
+			#614385,
+			#516395
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+
+	.orange-text-gradient {
+		background: #f12711; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #f12711, #f5af19); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to top,
+			#f12711,
+			#f5af19
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		-webkit-background-clip: border;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.green-border-gradient {
+		background: #11998e; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #11998e, #38ef7d); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to top,
+			#11998e,
+			#38ef7d
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		-webkit-background-clip: border;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.blue-text-gradient {
+		/* background: -webkit-linear-gradient(#eee, #333); */
+		background: #56ccf2; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #2f80ed, #56ccf2); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to top,
+			#2f80ed,
+			#56ccf2
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.pink-text-gradient {
+		background: #ec008c; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #ec008c, #fc6767); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to top,
+			#ec008c,
+			#fc6767
+		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	/* canvas- styles */
+	.canvas-loader {
+		font-size: 10px;
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		position: relative;
+		text-indent: -9999em;
+		animation: mulShdSpin 1.1s infinite ease;
+		transform: translateZ(0);
+	}
+
+	@keyframes mulShdSpin {
+		0%,
+		100% {
+			box-shadow: 0 -2.6em 0 0 #ffffff, 1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2),
+				2.5em 0 0 0 rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0 rgba(255, 255, 255, 0.2),
+				0 2.5em 0 0 rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0 rgba(255, 255, 255, 0.2),
+				-2.6em 0 0 0 rgba(255, 255, 255, 0.5), -1.8em -1.8em 0 0 rgba(255, 255, 255, 0.7);
+		}
+		12.5% {
+			box-shadow: 0 -2.6em 0 0 rgba(255, 255, 255, 0.7), 1.8em -1.8em 0 0 #ffffff,
+				2.5em 0 0 0 rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0 rgba(255, 255, 255, 0.2),
+				0 2.5em 0 0 rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0 rgba(255, 255, 255, 0.2),
+				-2.6em 0 0 0 rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0 rgba(255, 255, 255, 0.5);
+		}
+		25% {
+			box-shadow: 0 -2.6em 0 0 rgba(255, 255, 255, 0.5), 1.8em -1.8em 0 0 rgba(255, 255, 255, 0.7),
+				2.5em 0 0 0 #ffffff, 1.75em 1.75em 0 0 rgba(255, 255, 255, 0.2), 0 2.5em 0 0 rgba(255, 255, 255, 0.2),
+				-1.8em 1.8em 0 0 rgba(255, 255, 255, 0.2), -2.6em 0 0 0 rgba(255, 255, 255, 0.2),
+				-1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2);
+		}
+		37.5% {
+			box-shadow: 0 -2.6em 0 0 rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0 rgba(255, 255, 255, 0.5),
+				2.5em 0 0 0 rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0 #ffffff, 0em 2.5em 0 0 rgba(255, 255, 255, 0.2),
+				-1.8em 1.8em 0 0 rgba(255, 255, 255, 0.2), -2.6em 0 0 0 rgba(255, 255, 255, 0.2),
+				-1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2);
+		}
+		50% {
+			box-shadow: 0 -2.6em 0 0 rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2),
+				2.5em 0 0 0 rgba(255, 255, 255, 0.5), 1.75em 1.75em 0 0 rgba(255, 255, 255, 0.7), 0 2.5em 0 0 #ffffff,
+				-1.8em 1.8em 0 0 rgba(255, 255, 255, 0.2), -2.6em 0 0 0 rgba(255, 255, 255, 0.2),
+				-1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2);
+		}
+		62.5% {
+			box-shadow: 0 -2.6em 0 0 rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2),
+				2.5em 0 0 0 rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0 rgba(255, 255, 255, 0.5),
+				0 2.5em 0 0 rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0 #ffffff, -2.6em 0 0 0 rgba(255, 255, 255, 0.2),
+				-1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2);
+		}
+		75% {
+			box-shadow: 0 -2.6em 0 0 rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2),
+				2.5em 0 0 0 rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0 rgba(255, 255, 255, 0.2),
+				0 2.5em 0 0 rgba(255, 255, 255, 0.5), -1.8em 1.8em 0 0 rgba(255, 255, 255, 0.7), -2.6em 0 0 0 #ffffff,
+				-1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2);
+		}
+		87.5% {
+			box-shadow: 0 -2.6em 0 0 rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0 rgba(255, 255, 255, 0.2),
+				2.5em 0 0 0 rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0 rgba(255, 255, 255, 0.2),
+				0 2.5em 0 0 rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0 rgba(255, 255, 255, 0.5),
+				-2.6em 0 0 0 rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0 #ffffff;
+		}
+	}
+
+	.spinner {
+		width: 70.4px;
+		height: 70.4px;
+		--clr: rgb(247, 197, 159);
+		--clr-alpha: rgb(247, 197, 159, 0.1);
+		animation: spinner 1.6s infinite ease;
+		transform-style: preserve-3d;
+	}
+
+	.spinner > div {
+		background-color: var(--clr-alpha);
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		border: 3.5px solid var(--clr);
+	}
+
+	.spinner div:nth-of-type(1) {
+		transform: translateZ(-35.2px) rotateY(180deg);
+	}
+
+	.spinner div:nth-of-type(2) {
+		transform: rotateY(-270deg) translateX(50%);
+		transform-origin: top right;
+	}
+
+	.spinner div:nth-of-type(3) {
+		transform: rotateY(270deg) translateX(-50%);
+		transform-origin: center left;
+	}
+
+	.spinner div:nth-of-type(4) {
+		transform: rotateX(90deg) translateY(-50%);
+		transform-origin: top center;
+	}
+
+	.spinner div:nth-of-type(5) {
+		transform: rotateX(-90deg) translateY(50%);
+		transform-origin: bottom center;
+	}
+
+	.spinner div:nth-of-type(6) {
+		transform: translateZ(35.2px);
+	}
+
+	@keyframes spinner {
+		0% {
+			transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+		}
+
+		50% {
+			transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+		}
+
+		100% {
+			transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+		}
+	}
+
+	.pyramid-loader {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		display: block;
+		transform-style: preserve-3d;
+		transform: rotateX(-20deg);
+	}
+
+	.wrapper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+		animation: spin 4s linear infinite;
+	}
+
+	@keyframes spin {
+		100% {
+			transform: rotateY(360deg);
+		}
+	}
+
+	.pyramid-loader .wrapper .side {
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		transform-origin: center top;
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
+
+	.pyramid-loader .wrapper .side1 {
+		transform: rotateZ(-30deg) rotateY(90deg);
+		background: conic-gradient(#2bdeac, #f028fd, #d8cce6, #2f2585);
+	}
+
+	.pyramid-loader .wrapper .side2 {
+		transform: rotateZ(30deg) rotateY(90deg);
+		background: conic-gradient(#2f2585, #d8cce6, #f028fd, #2bdeac);
+	}
+
+	.pyramid-loader .wrapper .side3 {
+		transform: rotateX(30deg);
+		background: conic-gradient(#2f2585, #d8cce6, #f028fd, #2bdeac);
+	}
+
+	.pyramid-loader .wrapper .side4 {
+		transform: rotateX(-30deg);
+		background: conic-gradient(#2bdeac, #f028fd, #d8cce6, #2f2585);
+	}
+
+	.pyramid-loader .wrapper .shadow {
+		width: 60px;
+		height: 60px;
+		background: #8b5ad5;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		transform: rotateX(90deg) translateZ(-40px);
+		filter: blur(12px);
+	}
+}
+
+@layer base {
+	body::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	body::-webkit-scrollbar-track {
+		background: hsl(var(--secondary));
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background: hsl(var(--secondary-foreground) / 0.2);
+	}
+
+	@media (max-width: 380px) {
+		body::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
